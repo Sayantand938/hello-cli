@@ -1,0 +1,10 @@
+#!/usr/bin/env node
+
+(async () => {
+  try {
+    await import("../dist/cli.js"); // Dynamically import the CLI module
+  } catch (err) {
+    console.error("CLI failed to start:", err?.message || "Unknown error");
+    process.exitCode = 1; // Indicate failure
+  }
+})();

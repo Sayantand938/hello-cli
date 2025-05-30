@@ -1,0 +1,33 @@
+{
+  "name": "hello-cli",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A simple CLI tool",
+  "main": "dist/cli.js",
+  "bin": {
+    "hello-cli": "./bin/hello-cli"
+  },
+  "scripts": {
+    "start": "node dist/cli.js",
+    "dev": "ts-node src/cli.ts",
+    "build": "rimraf dist && tsc",
+    "lint": "eslint . --ext .ts",
+    "pkg": "pkg dist/cli.js --target node18-win-x64 --output dist/hello-cli.exe"
+  },
+  "dependencies": {
+    "axios": "^1.9.0",
+    "boxen": "^8.0.1",
+    "chalk": "^5.4.1",
+    "cli-table3": "^0.6.5",
+    "clipboardy": "^4.0.0",
+    "commander": "^14.0.0",
+    "env-paths": "^3.0.0",
+    "execa": "^9.6.0",
+    "rimraf": "^6.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.23",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
